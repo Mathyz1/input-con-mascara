@@ -15,7 +15,7 @@ let cardNumber = [];
 let dateNumber = [];
 let cvvNumber = [];
 
-inputCard.addEventListener("keydown", e => {
+inputCard.addEventListener("keypress", e => {
     if (e.key == "Tab") {
         return;
     }
@@ -25,7 +25,7 @@ inputCard.addEventListener("keydown", e => {
     inputCard.value = cardNumber.join("");
 })
 
-inputDate.addEventListener("keydown", e => {
+inputDate.addEventListener("keypress", e => {
     if (e.key == "Tab") {
         return;
     }
@@ -35,7 +35,7 @@ inputDate.addEventListener("keydown", e => {
     inputDate.value = dateNumber.join("");
 })
 
-inputCVV.addEventListener("keydown", e => {
+inputCVV.addEventListener("keypress", e => {
     if (e.key == "Tab") {
         return;
     }
