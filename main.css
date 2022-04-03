@@ -1,25 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(255, 155, 24);
+  font-family: 'Oswald', sans-serif;
+  background-color: #212520;
+  z-index: -4;
 }
 
 .card {
+  position: relative;
   width: 500px;
   height: 300px;
   border-radius: 10px;
   padding: 50px 20px 0 20px;
   box-sizing: border-box;
-  background: rgb(0, 114, 255);
-  background: radial-gradient(
-    circle,
-    rgba(0, 114, 255, 1) 1%,
-    rgba(33, 25, 173, 1) 100%
-  );
+  
   margin: 100px auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  
+}
+.bg-card{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /*background: rgb(0, 114, 255);*/
+  background: radial-gradient(
+    circle,
+    rgba(0, 114, 255, 0.2) 1%,
+    rgba(33, 25, 173, 0.2) 100%
+  ), linear-gradient(to left,rgba(255, 0, 0,0.5) ,rgba(0, 0, 255,0.5));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .card input {
+  font-family: 'Oxygen', sans-serif;
+  position: relative;
   font-size: 28px;
   padding: 10px;
   border: solid 1px rgb(45, 154, 226);
@@ -28,19 +49,80 @@ body {
   background-color: transparent;
   margin: 5px 0;
   outline: none;
+  z-index: 2;
+  text-decoration: none;
 }
 
+.card label{
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 10px;
+  padding: 10px;
+}
+
+
 .holder {
+  position: relative;
   color: white;
   font-weight: bold;
-  font-size: 28px;
-  padding-top: 50px;
+  font-size: 20px;
+  padding-top: 20px;
+  z-index: 2;
+  letter-spacing: 7px;
+}
+.card #input-card{
+  margin-top: 50px;
 }
 
 .card #input-date {
   width: 70px;
+  font-size: 12px;
+  padding: 10px;
 }
 
 .card #input-CVV {
-  width: 50px;
+  width: 72px;
+  font-size: 18px;
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+.barra-magnetica{
+  grid-column: 1 / 5;
+  grid-row: 2 / 3;
+  background-color: black;
+}
+
+.card-back label{
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+  font-size: 14px;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+.card-back{
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: 50px;
+  left: 125px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;/*65*/
+  grid-template-rows: 15% 15% 15% 20% auto auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: rgba(0, 114, 255,0.1);
+  background: radial-gradient(
+    circle,
+    rgba(0, 114, 255, 0.2) 20%,
+    rgba(33, 25, 173, 0.2) 100%
+  ), linear-gradient(to right,rgba(255, 0, 0,0.5) ,rgba(0, 0, 255,0.5));
+  z-index: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
