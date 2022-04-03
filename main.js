@@ -17,7 +17,6 @@ let cvvNumber = [];
 
 inputCard.addEventListener("keypress", e => {
     console.log(e.key);
-    alert(e.key);
     if (e.key == "Tab") {
         return;
     }
@@ -29,7 +28,6 @@ inputCard.addEventListener("keypress", e => {
 
 inputDate.addEventListener("keypress", e => {
     console.log(e.key);
-    alert(e.key);
     if (e.key == "Tab") {
         return;
     }
@@ -41,7 +39,6 @@ inputDate.addEventListener("keypress", e => {
 
 inputCVV.addEventListener("keypress", e => {
     console.log(e.key);
-    alert(e.key);
     if (e.key == "Tab") {
         return;
     }
